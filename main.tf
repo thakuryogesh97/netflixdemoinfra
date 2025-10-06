@@ -4,10 +4,10 @@ provider "aws" {
 
 resource "aws_instance" "one" {
   count                  = 4
-  ami                    = "ami-0360c520857e3138f"
+  ami                    = "ami-052064a798f08f0d3"
   instance_type          = "t2.medium"
-  key_name               = "terraformkeypair"
-  vpc_security_group_ids = ["sg-0f1d5f2f18bb4af01"]
+  key_name               = "saleemkeyp"
+  vpc_security_group_ids = ["sg-01ca5f009c7f3b4a0"]
   tags = {
     Name = var.instance_names[count.index]
   }
